@@ -1,0 +1,20 @@
+{
+    "composer": {
+        "wallet": {
+            "type": "composer-wallet-cloudant",
+            "options": {
+                "apikey": "tImQNrCS4ljzaS-TR-MYr12CGTXJcZu1xR7xYk-fMMt7",
+                "host": "49620067-a74f-40a3-819d-4dc7f91f3cf1-bluemix.cloudantnosqldb.appdomain.cloud",
+                "iam_apikey_description": "Auto-generated for key 2259e335-9fa1-4676-aa2c-210ca49892c8",
+                "iam_apikey_name": "Credentials-1",
+                "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+                "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/2a9e7b1890c24d39aeef7a5133b52a0a::serviceid:ServiceId-e05b8945-e124-47c4-9041-e70e2132063a",
+                "password": "bd34badb5fbb403fb4a3e968ca72448940a8057cee49c4e131d043722e383033",
+                "port": 443,
+                "url": "https://49620067-a74f-40a3-819d-4dc7f91f3cf1-bluemix:bd34badb5fbb403fb4a3e968ca72448940a8057cee49c4e131d043722e383033@49620067-a74f-40a3-819d-4dc7f91f3cf1-bluemix.cloudantnosqldb.appdomain.cloud",
+                "username": "49620067-a74f-40a3-819d-4dc7f91f3cf1-bluemix",
+                "database": "wallet"
+             }
+        }
+    }
+}

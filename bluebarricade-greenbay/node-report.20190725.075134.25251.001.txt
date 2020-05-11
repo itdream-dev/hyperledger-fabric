@@ -1,0 +1,237 @@
+================================================================================
+==== Node Report ===============================================================
+
+Event: exception, location: "OnUncaughtException"
+Filename: node-report.20190725.075134.25251.001.txt
+Dump event time:  2019/07/25 07:51:34
+Module load time: 2019/07/25 07:51:28
+Process ID: 25251
+Command line: node /home/skyclean/.nvm/versions/node/v8.9.4/bin/composer network start -c adminCard -A admin -C ./credentials/admin-pub.pem -f delete_me.card -a ./contracts/dist/greenbay-network.bna 
+
+Node.js version: v8.9.4
+(http_parser: 2.7.0, v8: 6.1.534.50, uv: 1.15.0, zlib: 1.2.11, ares: 1.10.1-DEV,
+ modules: 57, nghttp2: 1.25.0, openssl: 1.0.2n, icu: 59.1, unicode: 9.0,
+ cldr: 31.0.1, tz: 2017b)
+
+node-report version: 2.2.1 (built against Node.js v8.9.4, glibc 2.23, 64 bit)
+
+OS version: Linux 4.15.0-45-generic #48~16.04.1-Ubuntu SMP Tue Jan 29 18:03:48 UTC 2019
+(glibc: 2.23)
+
+Machine: skyclean-VirtualBox x86_64
+
+================================================================================
+==== JavaScript Stack Trace ====================================================
+
+ClientDuplexStream.<anonymous> (/home/skyclean/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/node_modules/fabric-client/lib/EventHub.js:1:1)
+emitOne (events.js:1:1)
+ClientDuplexStream.emit (events.js:1:1)
+addChunk (_stream_readable.js:1:1)
+readableAddChunk (_stream_readable.js:1:1)
+ClientDuplexStream.Readable.push (_stream_readable.js:1:1)
+Object.onReceiveMessage (/home/skyclean/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/node_modules/grpc/src/client_interceptors.js:1:1)
+InterceptingListener.recvMessageWithContext (/home/skyclean/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/node_modules/grpc/src/client_interceptors.js:1:1)
+/home/skyclean/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/node_modules/grpc/src/client_interceptors.js:1:1
+
+================================================================================
+==== Native Stack Trace ========================================================
+
+ 0: [pc=0x7f9f2100d56b] nodereport::OnUncaughtException(v8::Isolate*) [/home/skyclean/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/node_modules/node-report/api.node]
+ 1: [pc=0xf521c2] v8::internal::Isolate::Throw(v8::internal::Object*, v8::internal::MessageLocation*) [node]
+ 2: [pc=0xf0bf59] v8::internal::LoadIC::Load(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>) [node]
+ 3: [pc=0xf0ceb9] v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*) [node]
+ 4: [pc=0x3f3ccb98463d] 
+
+================================================================================
+==== JavaScript Heap and Garbage Collector =====================================
+
+Heap space name: new_space
+    Memory size: 33,554,432 bytes, committed memory: 33,428,864 bytes
+    Capacity: 16,498,688 bytes, used: 7,527,464 bytes, available: 8,971,224 bytes
+Heap space name: old_space
+    Memory size: 50,679,808 bytes, committed memory: 50,643,488 bytes
+    Capacity: 49,782,928 bytes, used: 48,352,360 bytes, available: 1,430,568 bytes
+Heap space name: code_space
+    Memory size: 2,097,152 bytes, committed memory: 1,678,464 bytes
+    Capacity: 1,922,976 bytes, used: 1,575,008 bytes, available: 347,968 bytes
+Heap space name: map_space
+    Memory size: 4,739,072 bytes, committed memory: 4,409,600 bytes
+    Capacity: 4,323,272 bytes, used: 4,231,128 bytes, available: 92,144 bytes
+Heap space name: large_object_space
+    Memory size: 6,303,744 bytes, committed memory: 6,303,744 bytes
+    Capacity: 1,408,284,536 bytes, used: 6,203,768 bytes, available: 1,402,080,768 bytes
+
+Total heap memory size: 97,374,208 bytes
+Total heap committed memory: 96,464,160 bytes
+Total used heap memory: 67,889,728 bytes
+Total available heap memory: 1,412,922,672 bytes
+
+Heap memory limit: 1,501,560,832
+
+================================================================================
+==== Resource Usage ============================================================
+
+Process total resource usage:
+  User mode CPU: 4.997680 secs
+  Kernel mode CPU: 0.398045 secs
+  Average CPU Consumption : 89.9287%
+  Maximum resident set size: 133,734,400 bytes
+  Page faults: 0 (I/O required) 54815 (no I/O required)
+  Filesystem activity: 0 reads 24 writes
+
+Event loop thread resource usage:
+  User mode CPU: 4.549275 secs
+  Kernel mode CPU: 0.396459 secs
+  Average CPU Consumption : 82.4289%
+  Filesystem activity: 0 reads 16 writes
+
+================================================================================
+==== Node.js libuv Handle Summary ==============================================
+
+(Flags: R=Ref, A=Active)
+Flags  Type      Address             Details
+[-A]   async     0x00000000023cca40  
+[--]   check     0x00007ffe7be74080  
+[R-]   idle      0x00007ffe7be740f8  
+[--]   prepare   0x00007ffe7be74208  
+[--]   check     0x00007ffe7be74280  
+[R-]   timer     0x00007ffe7be74170  repeat: 0, timeout expired: 101499450 ms ago
+[-A]   async     0x00000000021cf4c0  
+[R-]   timer     0x0000000002453880  repeat: 0, timeout expired: 101499453 ms ago
+[R-]   tty       0x000000000246a9a8  width: 132, height: 27, file descriptor: 9, write queue size: 0, writable
+[-A]   signal    0x00000000024548f0  signum: 28 (SIGWINCH)
+[R-]   tty       0x000000000246a5b8  width: 132, height: 27, file descriptor: 11, write queue size: 0, writable
+[-A]   async     0x00007f9f21215cc0  
+[-A]   timer     0x000000000249dc40  repeat: 0, timeout in: 2284 ms
+[R-]   timer     0x00000000024f0380  repeat: 0, timeout expired: 101499452 ms ago
+[RA]   timer     0x00000000024f0418  repeat: 0, timeout expired: 0 ms ago
+[-A]   async     0x00007f9f12ff76c0  
+[RA]   prepare   0x00007f9f12ff7600  
+[-A]   timer     0x000000000249d6e0  repeat: 0, timeout in: 741 ms
+[RA]   timer     0x00000000024f6fb0  repeat: 0, timeout in: 298195 ms
+[-A]   signal    0x000000000248a530  signum: 6 (SIGABRT)
+[-A]   signal    0x0000000002592ea0  signum: 14 (SIGALRM)
+[-A]   signal    0x0000000002592f90  signum: 1 (SIGHUP)
+[-A]   signal    0x00000000025b2e30  signum: 2 (SIGINT)
+[-A]   signal    0x00000000025b2f20  signum: 15 (SIGTERM)
+[-A]   signal    0x00000000025b1780  signum: 26 (SIGVTALRM)
+[-A]   signal    0x00000000025f9e60  signum: 24 (SIGXCPU)
+[-A]   signal    0x00000000025b1870  signum: 25 (SIGXFSZ)
+[-A]   signal    0x0000000002592800  signum: 12 (SIGUSR2)
+[-A]   signal    0x00000000025928f0  signum: 5 (SIGTRAP)
+[-A]   signal    0x00000000025929e0  signum: 31 (SIGSYS)
+[-A]   signal    0x00000000025a7030  signum: 3 (SIGQUIT)
+[-A]   signal    0x00000000025a7120  signum: 6 (SIGABRT)
+[-A]   signal    0x00000000025a7210  signum: 29 (SIGIO)
+[-A]   signal    0x00000000025a7300  signum: 29 (SIGIO)
+[-A]   signal    0x00000000025a73f0  signum: 30 (SIGPWR)
+[-A]   signal    0x00000000025a74e0  signum: 16 (SIGSTKFLT)
+[-A]   signal    0x00000000025a75d0  signum: 31 (SIGSYS)
+[RA]   timer     0x00000000025a76c0  repeat: 0, timeout in: 51 ms
+[-A]   tcp       0x00000000025a8af0  10.0.2.15:42514 connected to 12.1a.2ea9.ip4.static.sl-reverse.com:31003, send buffer size: 87040, recv buffer size: 374400, file descriptor: 12, write queue size: 0, readable, writable
+[-A]   tcp       0x00000000025a93e0  10.0.2.15:44048 connected to 12.1a.2ea9.ip4.static.sl-reverse.com:31002, send buffer size: 87040, recv buffer size: 374400, file descriptor: 13, write queue size: 0, readable, writable
+[-A]   timer     0x00000000024965c0  repeat: 0, timeout in: 119903 ms
+[-A]   timer     0x00000000025cff90  repeat: 0, timeout in: 100 ms
+[-A]   timer     0x00000000025d0030  repeat: 0, timeout in: 120000 ms
+
+================================================================================
+==== System Information ========================================================
+
+Environment variables
+  XDG_VTNR=7
+  XDG_SESSION_ID=c1
+  CLUTTER_IM_MODULE=xim
+  XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/skyclean
+  NVM_CD_FLAGS=
+  GPG_AGENT_INFO=/home/skyclean/.gnupg/S.gpg-agent:0:1
+  SHELL=/bin/bash
+  TERM=xterm-256color
+  VTE_VERSION=4205
+  QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1
+  WINDOWID=62914570
+  OLDPWD=/home/skyclean
+  UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1508
+  GNOME_KEYRING_CONTROL=
+  GTK_MODULES=gail:atk-bridge:unity-gtk-module
+  NVM_DIR=/home/skyclean/.nvm
+  USER=skyclean
+  LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+  QT_ACCESSIBILITY=1
+  XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+  XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+  SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+  DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path
+  XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+  PATH=/home/skyclean/.nvm/versions/node/v8.9.4/bin:/home/skyclean/bin:/home/skyclean/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  DESKTOP_SESSION=ubuntu
+  QT_IM_MODULE=ibus
+  QT_QPA_PLATFORMTHEME=appmenu-qt5
+  XDG_SESSION_TYPE=x11
+  PWD=/home/skyclean/greenbay
+  JOB=gnome-session
+  XMODIFIERS=@im=ibus
+  GNOME_KEYRING_PID=
+  LANG=en_US.UTF-8
+  GDM_LANG=en_US
+  MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path
+  IM_CONFIG_PHASE=1
+  COMPIZ_CONFIG_PROFILE=ubuntu
+  GDMSESSION=ubuntu
+  SESSIONTYPE=gnome-session
+  GTK2_MODULES=overlay-scrollbar
+  HOME=/home/skyclean
+  XDG_SEAT=seat0
+  SHLVL=1
+  LANGUAGE=en_US
+  LIBGL_ALWAYS_SOFTWARE=1
+  GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+  UPSTART_INSTANCE=
+  UPSTART_EVENTS=started starting
+  XDG_SESSION_DESKTOP=ubuntu
+  LOGNAME=skyclean
+  QT4_IM_MODULE=xim
+  XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+  DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-aHJtuCCTOJ
+  NVM_BIN=/home/skyclean/.nvm/versions/node/v8.9.4/bin
+  LESSOPEN=| /usr/bin/lesspipe %s
+  INSTANCE=Unity
+  UPSTART_JOB=unity-settings-daemon
+  XDG_RUNTIME_DIR=/run/user/1000
+  DISPLAY=:0
+  XDG_CURRENT_DESKTOP=Unity
+  GTK_IM_MODULE=ibus
+  LESSCLOSE=/usr/bin/lesspipe %s %s
+  XAUTHORITY=/home/skyclean/.Xauthority
+  _=/home/skyclean/.nvm/versions/node/v8.9.4/bin/composer
+  SUPPRESS_NO_CONFIG_WARNING=y
+  GRPC_SSL_CIPHER_SUITES=ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384
+
+Resource limits                        soft limit      hard limit
+  core file size (blocks)                       0       unlimited
+  data seg size (kbytes)                unlimited       unlimited
+  file size (blocks)                    unlimited       unlimited
+  max locked memory (bytes)                 65536           65536
+  max memory size (kbytes)              unlimited       unlimited
+  open files                              1048576         1048576
+  stack size (bytes)                      8388608       unlimited
+  cpu time (seconds)                    unlimited       unlimited
+  max user processes                        31674           31674
+  virtual memory (kbytes)               unlimited       unlimited
+
+Loaded libraries
+  /lib/x86_64-linux-gnu/libdl.so.2
+  /lib/x86_64-linux-gnu/librt.so.1
+  /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+  /lib/x86_64-linux-gnu/libm.so.6
+  /lib/x86_64-linux-gnu/libgcc_s.so.1
+  /lib/x86_64-linux-gnu/libpthread.so.0
+  /lib/x86_64-linux-gnu/libc.so.6
+  /lib64/ld-linux-x86-64.so.2
+  /home/skyclean/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/node_modules/node-report/api.node
+  /home/skyclean/.nvm/versions/node/v8.9.4/lib/node_modules/composer-cli/node_modules/grpc/src/node/extension_binary/node-v57-linux-x64-glibc/grpc_node.node
+  /lib/x86_64-linux-gnu/libnss_files.so.2
+  /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+  /lib/x86_64-linux-gnu/libnss_dns.so.2
+  /lib/x86_64-linux-gnu/libresolv.so.2
+
+================================================================================
