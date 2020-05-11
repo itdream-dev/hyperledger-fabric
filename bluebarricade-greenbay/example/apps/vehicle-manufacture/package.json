@@ -22,6 +22,6 @@
     "vehicle-manufacture-car-builder": "0.0.9",
     "vehicle-manufacture-manufacturing": "0.0.9",
     "vehicle-manufacture-vda": "0.0.9",
-    "ws": "^2.3.1"
+    "ws": "^7.3.0"
   }
 }
